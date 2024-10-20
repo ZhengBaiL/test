@@ -1,0 +1,29 @@
+<!--pages/movie/movie.wxml-->
+<view class="movie" wx:for="{{movieList}}" wx:key="index">
+  <!-- 图片 -->
+  <view class="movie-image">
+    <image src="{{item.cover.url}}" mode=""/>
+  </view>
+  <!-- 信息 -->
+  <view class="movie-msg">
+    <view class="movie-title">
+      {{item.title}}
+    </view>
+    <view class="movie-remark">
+      评分:
+      <text class="movie-score">{{item.rating.value}}</text>
+    </view>
+    <view class="movie-role">
+      主演:
+      <text>{{item.actors}}</text>
+    </view>
+    <view class="movie-year">
+      年份:
+      <text>{{item.year}}</text>
+    </view>
+  </view>
+  <!-- 评价按钮 -->
+  <van-button bindtap="goToEvaluate" data-movieId="{{item.id}}" class="btn" size="small" type="danger">评价</van-button>
+</view>
+<!-- 提示框 -->
+<van-toast id="van-toast" />

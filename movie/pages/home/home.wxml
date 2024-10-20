@@ -1,0 +1,25 @@
+<!--pages/home/home.wxml-->
+<!-- 引入模板 --> 
+<import src="../../templates/list"/>
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper 
+    class="swiper"
+    indicator-dots="true"
+    indicator-color="#0f0"
+    indicator-active-color="#f0f"
+    autoplay="true" 
+    interval="3000" 
+    duration="500"
+    previous-margin="30rpx"
+    next-margin="30rpx"
+    >
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+      <image class="swiperImg" src="{{item}}" mode=""/>
+    </swiper-item>
+  </swiper>
+  <!-- 模板内容 -->
+  <template is="list" data="{{tips:'近期热播国剧',data:opera}}"></template>
+  <template is="list" data="{{tips:'近期热门综艺',data:variety}}"></template>
+  <template is="list" data="{{tips:'近期热播美剧',data:AmericanTV}}"></template>
+</view>

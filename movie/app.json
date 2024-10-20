@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/movie/movie",
+    "pages/evaluate/evaluate",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/home_actived.png"
+    },{
+      "pagePath": "pages/movie/movie",
+      "text": "电影",
+      "iconPath": "/images/film.png",
+      "selectedIconPath": "/images/film_actived.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "/images/me.png",
+      "selectedIconPath": "/images/me_actived.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

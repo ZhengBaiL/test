@@ -1,0 +1,43 @@
+/* pages/movie/movie.wxss */
+.movie {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1px solid rgb(241, 141, 9);
+}
+.movie-remark{
+  color: blue;
+}
+.movie-role{
+  color:rgb(115, 193, 230);
+}
+.movie-role text{
+  color:rgb(90, 204, 45);
+}
+.movie-year{
+  color:rgb(115, 193, 230);
+}
+.movie-image image{
+  width: 260rpx;
+  height: 335rpx;
+  border-radius: 20rpx;
+}
+.movie-msg {
+  flex: 1;
+  font-size: 26rpx;
+  line-height: 1.7;
+  padding-left: 10rpx;
+}
+.movie-title {
+  font-size: 40rpx;
+  line-height: 1.5;
+  color: rgb(115, 193, 230);
+  font-weight: 700;
+}
+.movie-score {
+  color: orange;
+  font-size: 35rpx;
+}
+.btn {
+  width: 120rpx;
+  margin-top: 120rpx;
+}

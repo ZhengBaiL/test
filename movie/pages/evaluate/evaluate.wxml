@@ -1,0 +1,52 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class="detail-box">
+  <view class="detail">
+<!-- 背景图 -->
+  <view class="detail-main" style="background: url({{detailList.cover.image.large.url}}) no-repeat top/cover"></view>
+  <!-- 蒙层 -->
+  <view class="detail-dialog"></view>
+  <!-- 基础信息 -->
+  <view class="detail-info">
+    <image src="{{detailList.cover.image.large.url}}" mode="" class="detail-img" />
+    <view class="detail-msg">
+      <view class="detail-title">
+        {{detailList.title}}
+      </view>
+      <view class="detail-tips">
+        {{detailList.aka[0]}}
+      </view>
+      <view class="detail-score">
+        {{detailList.rating.value}}
+      </view>
+      <view class="detail-country">
+        {{detailList.countries[0]}}
+      </view>
+      <view class="detail-role">
+        导演:
+        <text>{{detailList.directors[0].name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 影片介绍 -->
+  <view class="detail-container">
+    {{detailList.intro}}
+  </view>
+</view>
+<!-- 评分 -->
+<view class="detail-mark">
+  <van-cell-group>
+    <van-field
+      value="{{ value }}"
+      placeholder="写些评价吧"
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+  </van-cell-group>
+  <van-divider />
+  <view class="star">
+    <text>您的评分:</text><van-rate value="{{ star }}" border="{{ false }}" bind:change="onChangeStar"  />
+  </view>
+  <van-divider />
+  <van-button type="danger" size="large" bindtap="submitBtn">提交评价</van-button>
+</view>
+</view>

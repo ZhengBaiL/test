@@ -1,0 +1,11 @@
+<!--components/rate.wxml-->
+<view class="rate-content" wx:if="{{val}}">
+  <block wx:for="{{5}}" wx:key="index">
+    <text class="full-star" wx:if="{{item<val.star_count}}"></text>
+    <text class="empty-star" wx:else=""></text>
+  </block>
+  <text class="rate-text">{{val.value}}</text>
+</view>
+<view wx:else>
+  <text class="rate-text">暂无评分</text>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+  <!-- 用户头像 -->
+  <view class="my-image">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <!-- 用户名字 -->
+  <view class="my-name">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>

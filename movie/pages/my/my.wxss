@@ -1,0 +1,27 @@
+/* pages/my/my.wxss */
+.my {
+  width: 100%;
+  height: 400rpx;
+  background: rgb(256, 150, 128);
+  position: relative;
+}
+.my-image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0rpx;
+  left: 50%;
+  transform: translate(-50%,60rpx);
+}
+.my-name {
+  font-size: 36rpx;
+  color: #fff;
+  /* 100-900 */
+  font-weight: 600;
+  position: absolute;
+  top: 200rpx;
+  left: 50%;
+  transform: translate(-50%,90rpx);
+}

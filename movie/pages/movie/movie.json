@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText":"电影",
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

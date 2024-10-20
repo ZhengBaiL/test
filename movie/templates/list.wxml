@@ -1,0 +1,22 @@
+<import src="./list-item"/>
+<template name="list">
+  <view class="list">
+  <!-- 列表标题 -->
+    <view class="list-title">
+    <!-- 左侧标题 -->
+      <view class="title-left">
+        {{tips}}
+      </view>
+      <!-- 右侧标题 -->
+      <view class="title-right" hover-class="title-hover">
+          <text>更多</text>
+      </view>
+    </view>
+    <!-- 图文内容 引用模板 -->
+    <view class="list-content">
+      <scroll-view class="scroll-view" scroll-x="true" scroll-y="false">
+        <template is="list-item" data="{{data}}"></template>
+      </scroll-view>
+    </view>
+  </view>
+</template>

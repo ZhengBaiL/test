@@ -1,0 +1,8 @@
+<template name="list-item">
+  <view class="list-item" wx:for="{{data}}" wx:key="index">
+    <image class="item-image" src="{{item.pic.large}}" mode=""/>
+    <text class="item-title">{{item.title}}</text>
+    <!-- 评分组件 -->
+    <rate class="rate-rating" val="{{item.rating}}"></rate>
+  </view>
+</template>
