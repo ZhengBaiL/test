@@ -1,0 +1,5 @@
+<!--pages/detail/detail.wxml-->
+<text>详情</text>
+<view>
+  我叫{{obj.name}}排在{{obj.id}}号
+</view>

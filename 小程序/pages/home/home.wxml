@@ -1,0 +1,73 @@
+<!--pages/home/home.wxml-->
+<header1></header1>
+111
+<!-- 
+  npm init 初始化项目 
+  按照文档安装
+ -->
+<navigator url="/pages/my/my">去列表</navigator>
+<view>hahah</view>
+<view bind:tap="getToDetail">详情页面</view>
+<view>
+  今天星期{{week}}
+  <text>
+    我叫{{obj.name}},今年{{obj.age}}
+  </text>
+</view>
+<!-- 列表渲染 -->
+<!-- v-for= 'item in arr' :key=index -->
+<view wx:for="{{arr}}" wx:for-item="item" wx:key="index">
+  <view>
+    {{index+1}}--我叫{{item.name}}--今年{{item.age}}
+  </view>
+</view>
+<!-- 条件渲染 -->
+<view wx:if="{{obj.age < 18}}">未成年</view>
+<view wx:elif="{{obj.age == 18}}">刚成年</view>
+<view wx:else="{{obj.age > 18}}">成年人</view>
+<!-- 内置组件 -->
+<button bind:tap="getMain">哈哈哈</button>
+<input type="text" class="inp" bindtap="getCC" />
+<!-- 引用 -->
+<template name="news">
+  <view>今天天气真好,今天是星期{{hoilday}}</view>
+</template>
+<template name="aa">
+  <view>哈哈哈哈哈</view>
+</template>
+<view class="aa" catch:tap="getAA">
+  <view class="bb" catch:tap="getBB"></view>
+</view>
+<!-- swiper -->
+<view class="swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item {{item}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- scroll-x 横滚 -->
+<view class="page-section-spacing">
+  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+    <view id="demo1" class="scroll-view-item_H demo-text-4"></view>
+    <view id="demo2" class="scroll-view-item_H demo-text-5"></view>
+    <view id="demo3" class="scroll-view-item_H demo-text-6"></view>
+    <view id="demo1" class="scroll-view-item_H demo-text-4"></view>
+    <view id="demo2" class="scroll-view-item_H demo-text-5"></view>
+    <view id="demo3" class="scroll-view-item_H demo-text-6"></view>
+  </scroll-view>
+</view>
+<!-- scroll-y 竖滚 -->
+
+<view class="page-section-spacing">
+  <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="demo1" class="scroll-view-item demo-text-7"></view>
+    <view id="demo2" class="scroll-view-item demo-text-8"></view>
+    <view id="demo3" class="scroll-view-item demo-text-9"></view>
+    <view id="demo1" class="scroll-view-item demo-text-7"></view>
+    <view id="demo2" class="scroll-view-item demo-text-8"></view>
+    <view id="demo3" class="scroll-view-item demo-text-9"></view>
+  </scroll-view>
+</view>

@@ -1,0 +1,6 @@
+<!--components/header/header.wxml-->
+<view>
+  <view class="head">
+    头部模块
+  </view>
+</view>

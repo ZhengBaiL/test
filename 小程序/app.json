@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/home/home",
+    "pages/my/my",
+    "components/header/header",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "哈哈哈",
+    "navigationBarBackgroundColor": "#ff0000"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "购物车",
+        "iconPath": "./icon/shop.png",
+        "selectedIconPath": "./icon/shop1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./icon/home.png",
+        "selectedIconPath": "./icon/home1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./icon/my.png",
+        "selectedIconPath": "./icon/my1.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
