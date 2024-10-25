@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p id="vase">{{msg}}</p>
+        <button @click="getMain">修改</button>
+        <!-- 
+            数据未及时更新
+            this.$nextTick([callback,content])
+            修改渲染后数据未更新的问题  常用于created生命周期中
+         -->
+    </div>
+    <script src="../vue初阶/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                msg:"这是一条信息"
+            },
+            methods: {
+                getMain() {
+                    this.msg = '哈哈哈哈';
+                    this.$nextTick(()=>{
+                        console.log(document.getElementById("vase").innerHTML,'值1');
+                    })
+                    console.log(document.getElementById("vase").innerHTML,'值2');
+                }
+            },
+        })
+    </script>
+</body>
+</html>
