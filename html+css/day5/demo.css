@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#box {
+    width: 947px;
+    height: 850px;
+    border: 1px solid #000;
+    margin: 25px auto;
+}
+#container {
+    width: 910px;
+    height: 100%;
+    margin:0 auto;
+}
+/* 头部样式代码 */
+#header {
+    width: 100%;
+    height: 66px;
+    overflow: hidden;
+    border-bottom: 2px solid rgb(189, 59, 59);
+}
+#header .logo {
+    width: 349px;
+    height: 100%;
+    float: left;
+}
+#header .logo img {
+    width: 118px;
+    height: 49px;
+    margin-top: 10px;
+}
+#header .pictureMsg {
+    width: 561px;
+    height: 100%;
+    float: left;
+}
+#header .pictureMsg .img1 {
+    width: 425px;
+    height: 37px;
+    margin-top: 22px;
+}
+#header .pictureMsg .img2 {
+    width: 122px;
+    height: 36px;
+    margin-left: 8px;
+}
+/* 主体代码 */
+#main {
+    width: 100%;
+}
+/* 第一部分 */
+#main .nav {
+    width: 100%;
+    height: 70px;
+    padding-top: 9px;
+    overflow: hidden;
+}
+#main .nav .list {
+    width: 148px;
+    height: 50px;
+    float: left;
+    margin-left: 4px;
+    border-right: 1px solid #eee;
+}
+#main .nav .list:first-child {
+    margin-left: 0;
+}
+#main .nav .list ul:first-child {
+    overflow: hidden;
+}
+#main .nav .list ul:first-child li {
+    float: left;
+    margin-left: 5px;
+}
+#main .nav .list ul:first-child li a {
+    color: #000;
+    font-size: 13px;
+}
+#main .nav .list ul:first-child li:first-child {
+    font-weight: bold;
+    margin-left: 0;
+} 
+#main .nav .list ul:last-child {
+    overflow: hidden;
+}
+#main .nav .list ul:last-child li {
+    float: left;
+    margin-left: 5px;
+}
+#main .nav .list ul:last-child li a {
+    color: #000;
+    font-size: 13px;
+}
+#main .nav .list ul:last-child li:first-child {
+    font-weight: bold;
+    margin-left: 0;
+} 
+#main .nav .list ul li:hover a {
+    color: aqua;
+}
+/* 第二部分 */
+#main .banner {
+    width: 100%;
+    height: 93px;
+}
+#main .banner img {
+    width: 100%;
+    height: 100%;
+}
+/* 第三部分 */
+#main .msg {
+    width: 100%;
+    height: 486px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+#main .msg .msg_left {
+    width: 600px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+}
+#main .msg .msg_left .news {
+    width: 202px;
+    height: 100%;
+    float: left;
+}
+#main .msg .msg_left .news .newsTop {
+    width: 100%;
+    height: 37px;
+    overflow: hidden;
+}
+#main .msg .msg_left .news .newsTop .tip {
+    overflow: hidden;
+    float: left;
+    margin-top: 5px;
+}
+#main .msg .msg_left .news .newsTop .tip img{
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin-top: 3px;
+}
+#main .msg .msg_left .news .newsTop .tip p{
+    float: left;
+    font-size: 21px;
+}
+#main .msg .msg_left .news .newsTop .tip p:hover {
+    font-size: 24px;
+    font-weight: bold;
+}
+#main .msg .msg_left .news .newsTop .music {
+    float: right;
+    margin-top: 5px;
+}
+#main .msg .msg_left .news .newsTop .music p{
+    font-size: 21px;
+}
+#main .msg .msg_left .news .newsTop .music p:hover {
+    font-size: 24px;
+    font-weight: bold;
+}
+#main .msg .msg_left .news .newsBottom dl:first-child {
+    margin-top: 20px;
+}
+#main .msg .msg_left .news .newsBottom dl:last-child {
+    margin-top: 40px;
+}
+#main .msg .msg_left .news .newsBottom dl {
+    width: 190px;
+    height: 163px;
+    margin: 0 auto;
+}
+#main .msg .msg_left .news .newsBottom dl dt {
+    width: 190px;
+    height: 120px;
+}
+#main .msg .msg_left .news .newsBottom dl dt img {
+    width: 100%;
+    height: 100%;
+}
+#main .msg .msg_left .news .newsBottom dl dd {
+    font-size: 14px;
+    margin-top: 5px;
+} 
+#main .msg .msg_left .news .newsBottom dl dd span {
+    font-size: 14px;
+    margin-left: 4px;
+}
+#main .msg .msg_left .list {
+    width: 380px;
+    height: 100%;
+    float: right;
+}
+#main .msg .msg_left .list .listTop {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+}
+#main .msg .msg_left .list .listTop p {
+    color: #ccc;
+    margin-left: 241px;
+}
+#main .msg .msg_left .list .listBottom ul:first-child {
+    margin-top: 27px;
+    margin-left: 47px;
+}
+#main .msg .msg_left .list .listBottom ul:last-child {
+    margin-top: 40px;
+    margin-left: 47px;
+}
+#main .msg .msg_left .list .listBottom ul li:first-child a {
+    font-weight: bold;
+}
+#main .msg .msg_left .list .listBottom ul li {
+    line-height: 1.6;
+}
+#main .msg .msg_left .list .listBottom ul li a {
+    overflow: hidden;
+    display: block;
+}
+#main .msg .msg_left .list .listBottom ul li a span:first-child {
+    display: block;
+    float: left;
+    width: 5px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+#main .msg .msg_left .list .listBottom ul li a span:last-child {
+    display: block;
+    float: left;
+    margin-left: 5px;
+}
+#main .msg .msg_left .list .listBottom ul li a span {
+    color: #000;
+}
+#main .msg .msg_right {
+    width: 285px;
+    height: 450px;
+    float: right;
+    border: 1px solid #ccc;
+    border-top: 1px solid #f00;
+}
+#main .msg .msg_right .title {
+    font-size: 22px;
+    color: #f00;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 14px;
+}
+#main .msg .msg_right dl {
+    width: 253px;
+    height: 53px;
+    overflow: hidden;
+    margin: 23px auto 0;
+    border-bottom: 1px solid #ccc;
+}
+#main .msg .msg_right dl dt {
+    width: 38px;
+    height: 38px;
+    float: left;
+    margin-top: 6px;
+}
+#main .msg .msg_right dl dt img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+#main .msg .msg_right dl dd {
+    float: left;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+#main .msg .msg_right dl dd .options {
+    color: #ccc;
+}
+/* 第四部分 */
+#main .attract {
+    width: 100%;
+    height: 81px;
+    background: #eee;
+}
+/* 页尾代码 */
+#footer {
+    width: 100%;
+    height: 34px;
+    background: #000;
+}

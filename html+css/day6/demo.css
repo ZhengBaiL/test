@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* 主体给宽不给高 */
+#box {
+    width: 100%;
+}
+/* 头部 */
+#box #header {
+    width: 100%;
+    height: 72px;
+}
+#header .container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#header .container .left {
+    width: 92px;
+    height: 42px;
+    float: left;
+}
+#header .container .left img {
+    width: 100%;
+    height: 100%;
+    margin-top: 14px;
+}
+#header .container .mid {
+    width: 189px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    margin-left: 94px;
+}
+#header .container .mid .address {
+    width: 68px;
+    height: 25px;
+    float: left;
+    margin-top: 18px;
+}
+#header .container .mid .address .picture1 {
+    font-size: 15px;
+}
+#header .container .mid .address .picture2 {
+    font-size: 9px;
+    margin-left: -6px;
+}
+#header .container .mid .address .city {
+    font-size: 16px;
+    margin-left: -5px;
+}
+#header .container .mid .nav {
+    width: 100px;
+    height: 100%;
+    float: right;
+}
+#header .container .mid .nav ul{
+    overflow: hidden;
+    margin-left: 18px;
+    margin-top: 18px;
+}
+#header .container .mid .nav ul li{
+    float: left;
+}
+#header .container .mid .nav ul li a {
+    font-size: 16px;
+    color: #000;
+}
+#header .container .mid .nav ul li:first-child a {
+    color: #FF1268;
+}
+#header .container .mid .nav ul li:last-child {
+    margin-left: 15px;
+}
+#header .container .mid .nav ul li a:hover {
+    color: #FF1268;
+}
+#header .container .right {
+    width: 627px;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+}
+#header .container .right .search {
+    width: 431px;
+    height: 46px;
+    float: left;
+    overflow: hidden;
+    background: #f8f8f8;
+    border-radius: 20px;
+    margin-top: 13px;
+}
+#header .container .right .search img {
+    width: 17px;
+    height: 18px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#header .container .right .search input {
+    width: 319px;
+    height: 46px;
+    border: none;
+    outline: none;
+    float: left;
+    margin-left: 9px;
+    background: #f8f8f8;
+}
+
+#header .container .right .search .btn {
+    width: 66px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    background: #FF1268;
+}
+#header .container .right .login {
+    width: 62px;
+    height: 72px;
+    float: left;
+    overflow: hidden;
+    margin-left: 44px;
+}
+#header .container .right .login .picture {
+    font-size: 26px;
+    float: left;
+    display: block;
+    margin-top: 22px;
+}
+#header .container .right .login span:last-child {
+    font-size: 15px;
+    float: left;
+    display: block;
+    margin-top: 25px;
+    margin-left: 6px;
+}
+#header .container .right .downLoad {
+    width: 62px;
+    height: 72px;
+    float: right;
+    overflow: hidden;
+}
+#header .container .right .downLoad .picture {
+    font-size: 26px;
+    float: left;
+    display: block;
+    margin-top: 22px;
+}
+#header .container .right .downLoad span:last-child {
+    font-size: 15px;
+    float: left;
+    display: block;
+    margin-top: 25px;
+    margin-left: 6px;
+}
+/* 主体 */
+#main .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+#main .container .banner {
+    width: 100%;
+    height: 320px;
+}
+#main .container .banner img {
+    width: 100%;
+    height: 100%;
+}
+#main .container .list {
+    width: 1200px;
+    height: 118px;
+    border: 1px solid #ccc;
+    margin-top: 17px;
+    overflow: hidden;
+    padding-top: 29px;
+}
+#main .container .list .listItem {
+    width: 119px;
+    height: 69px;
+    float: left;
+}
+#main .container .list .listItem .word {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+#main .container .list .listItem .word:hover {
+    color: #FF1268;
+}
+#main .container .list .listItem .picture {
+    margin: 0 auto;
+}
+#main .container .list .listItem:nth-child(1) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px 0px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(2) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -68px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(3) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -128px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(4) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -187px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(5) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -242px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(6) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -300px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(7) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -360px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(8) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -424px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(9) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -481px;
+    background-size: cover;
+}
+#main .container .list .listItem:nth-child(10) .picture {
+    width: 48px;
+    height: 48px;
+    background: url("./images/picture.png");
+    background-position: 0px -540px;
+    background-size: cover;
+}
+#main .container .shop1 {
+    width: 100%;
+    height: 457px;
+    border: 1px solid #f00;
+    margin-top: 12px;
+}
+#main .container .shop2 {
+    width: 100%;
+    height: 457px;
+    border: 1px solid #f00;
+    margin-top: 12px;
+}
+#main .container .shop3 {
+    width: 100%;
+    height: 457px;
+    border: 1px solid #f00;
+    margin-top: 12px;
+}
+#main .container .shop4 {
+    width: 100%;
+    height: 457px;
+    border: 1px solid #f00;
+    margin-top: 12px;
+    margin-bottom: 66px;
+}
+/* 页尾 */
+#footer {
+    width: 100%;
+    height: 350px;
+    background: #f8f8f8;
+}
+#footer .container {
+    width: 1200px;
+    height: 100%;
+    background: #0f0;
+    margin: 0 auto;
+}

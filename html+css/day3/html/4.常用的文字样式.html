@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background: rgba(255,0,0,.5);
+            /* opacity: .4; */
+        }
+        #main {
+            width: 300px;
+            height: 300px;
+            background: #f00;
+            opacity: .5;
+        }
+        #news {
+            /* 文字颜色  color
+               字体大小 font-size:xxpx;
+                浏览器默认的根字体大小16px
+                最小可识别字体 12px
+               字体粗细
+                font-weight
+                加粗 bold bolder 600~900
+                正常 normal 400 500
+                变细 lighter 100~300
+               字体样式
+                font-style
+                倾斜 italic
+                正常 normal 
+               字体
+                font-family
+               透明度
+                opacity:0(全透明)~1(全显示) 元素透明 不消失
+            */
+            color: rgb(255, 255, 0);
+            font-size: 36px;
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Courier New', Courier, monospace;
+            /* 
+                常用16进制颜色          rgb颜色                     rgba(a=>alpha) 0(全透明)~1(全显示)
+                红色 #f00   #ff0000         rbg(255,0,0)
+                黄色 #ff0   #ffff00         rbg(255,255,0)
+                绿色 #0f0   #00ff00         rbg(0,255,0)
+                蓝色 #00f   #0000ff         rbg(0,0,255)
+                白色 #fff   #ffffff         rbg(255,255,255)
+                黑色 #000   #000000         rbg(0,0,0)
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="news">这是一段文字</span>
+        <span>这是一段描述</span>
+    </div>
+    <div id="main">
+        <span>这是一段文字</span>
+    </div>
+</body>
+</html>

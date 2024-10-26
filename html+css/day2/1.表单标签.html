@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表单 form 
+               属性 action 将表单中的数据提交到服务端上（一般不用）
+            输入框  input 行内块元素
+                属性
+                placeholder 提示信息 并不会影响输入框的使用
+                type:
+                    text 输入框
+                    password 密码
+                    submit  提交按钮
+                    reset   重置按钮
+                    button  自定义按钮; value 自定义内容
+                    radio   单选;  name名称相同
+                    checkbox 多选; checked 默认选中;  disabled 禁止选中
+     -->
+     <form action="">
+        <input type="text" placeholder="请输入您的用户名">
+        <br>
+        <input type="password" placeholder="请输入密码">
+        <br>
+        <input type="submit">
+        <input type="reset">
+        <input type="button" value="自定义">
+        <br>
+        <input name="aaa" type="radio">男
+        <input name="aaa" type="radio">女
+        <br>
+        <input type="checkbox">篮球
+        <input type="checkbox" checked>足球
+        <input type="checkbox" disabled>排球
+        <input type="checkbox">台球
+        <br>
+        <!-- 
+            下拉框
+                select 与 option 一起组成
+                默认选择 selected
+                禁止选中 disabled
+         -->
+        <select>
+            <option value="1">小学</option>
+            <option value="2" selected>初中</option>
+            <option value="3" disabled>高中</option>
+            <option value="4">大学</option>
+        </select>
+        <!-- 
+            文本域
+            textarea
+             
+            rows 行
+            clos 列
+            maxlength 最大输入长度
+         -->
+         <textarea rows="10" cols="30" maxlength="10"></textarea>
+     </form>
+</body>
+</html>

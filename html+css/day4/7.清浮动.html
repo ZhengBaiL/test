@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* overflow: auto; */
+            /* overflow: hidden; */
+        }
+        .one {
+            width: 200px;
+            height: 200px;
+            background: #00f;
+            float: left;
+        }
+        .two {
+            width: 200px;
+            height: 200px;
+            background: #f0f;
+            float: left;
+        }
+        .three {
+            width: 200px;
+            height: 200px;
+            background: #0ff;
+            float: left;
+        }
+        .four {
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+            float: left;
+        }
+        .five {
+            clear: right;
+        }
+        /* .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <!--
+        浮动导致的问题？
+            使用浮动标签的父元素的高度塌陷
+        清浮动：
+            1.溢出隐藏法
+                在塌陷的父元素上添加overflow：hidden/auto属性
+            2.伪元素清浮动
+                .clearfix::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                将 属性名添加到高度塌陷的父级盒子上
+            3.额外标签法 
+                在浮动的同级添加一个空盒子 然后给这个盒子一个样式clear:both/left/right/none
+     -->
+    <div class="box">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+    </div>
+</body>
+</html>

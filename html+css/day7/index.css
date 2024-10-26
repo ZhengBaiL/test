@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#box {
+    width: 100%;
+}
+/* 头部代码 */
+#header {
+    width: 100%;
+    height: 35px;
+    background: #00f;
+}
+#header .container {
+    width: 1200px;
+    height: 100%;
+    background-color: aqua;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#header .container .left {
+    width: 228px;
+    height: 100%;
+    float: left;
+    background: #0f0;
+}
+#header .container .right {
+    width: 262px;
+    height: 100%;
+    float: right;
+    background: #ff0;
+}
+/* 主体 */
+#main {
+    width: 100%;
+}
+/* 第一部分 */
+#main .tip {
+    width: 100%;
+    height: 152px;
+    background: pink;
+}
+#main .tip .container {
+    width: 1200px;
+    height: 100%;
+    background: gold;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#main .tip .container .logo {
+    width: 176px;
+    height: 49px;
+    float: left;
+    background: #fff;
+}
+#main .tip .container .search {
+    width: 536px;
+    height: 73px;
+    float: left;
+    background: #f0f;
+}
+#main .tip .container .shop {
+    width: 90px;
+    height: 21px;
+    float: left;
+    background: #00f;
+}
+/* 第二部分 */
+#main .nav {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+#main .nav ul {
+    overflow: hidden;
+}
+#main .nav ul li {
+    float: left;
+    padding: 12px 51.5px;
+}
+#main .nav ul li:hover {
+    background: #6F26BD;
+} 
+#main .nav ul li:hover a{
+    color: #fff;
+} 
+#main .nav ul li a {
+    font-size: 14px;
+}
+#main .nav ul li:first-child {
+    width: 260px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+    background: #6F26BD;
+}
+#main .nav ul li:first-child a{
+    color: #fff;
+}
+#main .nav ul li a{
+    color: #000;
+}
+#main .nav ul li:first-child:hover {
+    background-color: #f00;
+}
+#main .nav ul li:first-child:hover a {
+    color: #ff0;
+}
+#main .nav .hot {
+    position: absolute;
+    top: -1px;
+    left: 818px;
+}
+/* 第三部分 */
+#main .banner {
+    width: 100%;
+    height: 576px;
+    /* position: relative; */
+}
+#main .banner img {
+    width: 100%;
+    height: 100%;
+}
+#main .banner .container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -581px;
+}
+#main .banner .dialog {
+    width: 260px;
+    height: 546px;
+    background: #000;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 第四部分 */
+#main .shop {
+    width: 1200px;
+    height: 376px;
+    overflow: hidden;
+    background: #0f0;
+    margin: 12px auto 53px;
+}
+#main .shop .left {
+    width: 590px;
+    height: 100%;
+    float: left;
+    background: gold;
+}
+#main .shop .right {
+    width: 590px;
+    height: 100%;
+    float: right;
+    background: rgb(0, 21, 255);
+}
+/* 第五部分 */
+#main .list {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    padding-bottom: 40px;
+}
+#main .list .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+#main .list .container .partOne {
+    width: 100%;
+    height: 566px;
+    background: pink;
+}
+#main .list .container .partTwo {
+    width: 100%;
+    height: 566px;
+    background: plum;
+}
+#main .list .container .partThree {
+    width: 100%;
+    height: 566px;
+    background: peachpuff;
+}
+#main .list .container img {
+    width: 129px;
+    height: 36px;
+    display: block;
+    margin: 30px auto 0;
+}
+/* 页尾 */
+#footer {
+    width: 100%;
+    height: 375px;
+    background: #ff0;
+}
+#footer .container {
+    width: 1200px;
+    height: 100%;
+    background: goldenrod;
+    margin: 0 auto;
+}
+#footer .container .top {
+    width: 100%;
+    height: 195px;
+    background: #00f;
+}
+#footer .container .mid {
+    width: 100%;
+    height: 100px;
+    background: #f0f;
+}
+#footer .container .bottom {
+    width: 100%;
+    height: 80px;
+    background: pink;
+}

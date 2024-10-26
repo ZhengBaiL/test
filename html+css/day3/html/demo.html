@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 100px;
+            background: #0f0;
+        }
+        .btn {
+            width: 300px;
+            height: 100px;
+            color: #00f;
+            text-align: center;
+            line-height: 100px;
+        }
+        .main {
+            opacity: 0;
+            /* display: none; */
+        }
+        .box:hover .main {
+            opacity: 1;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        类选择器
+            写法：
+                在body里
+                开始标签中 class="xxx"
+                在style中
+                .xxx {样式....}
+
+     -->
+     <div class="box">
+        <p class="btn">我的标签</p>
+        <p class="main">具体内容</p>
+     </div>
+</body>
+</html>

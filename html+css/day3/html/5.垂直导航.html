@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 取消ul默认样式 */
+      ul {
+        list-style: none;
+      }
+      /* 取消a标签的默认样式 */
+      /* 
+            
+            text-decoration: 
+            none 消除
+            underline 下划线
+            overline  上划线
+            line-through 删除线
+        */
+      a {
+        text-decoration: none;
+        color: #ff0;
+        /* text-decoration: line-through; */
+      }
+      ul li {
+        width: 100px;
+        height: 80px;
+        background: #f00;
+        /* 在已知宽高的盒子内文字居中 */
+        /* 水平居中 */
+        text-align: center;
+        /* 垂直居中 */
+        line-height: 80px;
+        margin-top: 10px;
+      }
+      /* ul li:nth-child(2n+1) {
+        background: #ff0;
+      }
+      ul li:nth-child(2n+1) a{
+        color: #f00;
+      } */
+      /* 划过效果 */
+      ul li:hover {
+        background: #00f;
+      }
+      ul li:hover a {
+        color: #0f0;
+      }
+      ul li:first-child:hover {
+        /* 显示元素 */
+        /* display: block; */
+      }
+      span {
+        width: 100px;
+        height: 50px;
+        background: #0ff;
+        /* 将元素转成块级元素 */
+        display: block;
+      }
+      #content div {
+        width: 200px;
+        height: 200px;
+        /* 隐藏元素 */
+        /* display: none; */
+        /* 将元素转成行内元素 */
+        /* display: inline; */
+        /* 将元素转成行内块元素 */
+        display: inline-block;
+      }
+      #partOne {
+        background: #00f;
+        color: #0f0;
+        display: none;
+        display: block;
+      }
+      #part-two {
+        background: #0ff;
+        color: #00f;
+      }
+      #partThree {
+        background: #f0f;
+        color: #ff0;
+      }
+      #partFour {
+        background: #ff0;
+        color: #f00;
+      }
+      /* 
+        伪元素选择器
+        :first-child 第一个子元素
+        :last-child 最后一个子元素
+        :nth-child(xxx) 自定义子元素
+        偶数 even 2n
+        奇数 odd 2n+1
+      */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h4>垂直导航</h4>
+      <span>内容1</span><span>内容2</span><span>内容3</span>
+      <ul>
+        <li><a href="">首页</a></li>
+        <li><a href="">我的</a></li>
+        <li><a href="">购物车</a></li>
+        <li><a href="">登录</a></li>
+      </ul>
+      <!-- 驼峰命名法:第二个单词首字母大写-->
+      <div id="content">
+        <div id="partOne">第一个盒子</div>
+        <div id="part-two">第二个盒子</div>
+        <div id="partThree">第三个盒子</div>
+        <div id="partFour">第四个盒子</div>
+      </div>
+    </div>
+  </body>
+</html>

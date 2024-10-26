@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 1500px;
+            /* color: #fff; */
+            /* background: #00f; */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        标签：
+            1.html文档标签=>文档流
+            2.按照是否换行区分：
+                a.换行标签 => 块级元素
+                  div 区分块，一般页面排版需要先画整体的div盒子 独占一行
+                  h标签 h1~h6 逐级递减 放大加粗字体 独占一行 
+                  p 放置段落文本
+                  br 换行
+                  hr 分割线
+                  无序列表 ul li组成
+                    属性 type: disc 实心圆（默认样式）; circle 空心圆 ；square 正方形
+                  有序列表 ol li 组成
+                    属性 type: 1 i I A a ; start 从...开始； reversed 倒序
+                b.不换行标签 => 行内元素 在一行显示
+                 b  加粗 单纯样式加粗
+                 strong 加粗 有语义上的含义
+                 i  倾斜 单纯样式倾斜
+                 em 倾斜 有语义上的含义
+                 u  下划线
+                 s  删除线
+                 sub 下标
+                 sup 上标
+                 span 划分行内区域
+                 a   超链接 跳转
+                 属性：href
+                    1.放置跳转的网页路径
+                    2.# 回到页面顶部
+                    3."" 空字符串是 刷新当前页面
+            3.按照是否闭合分：闭合标签和空标签
+            闭合标签：由开始标签(<xxx>)与结束标签(</xxx>)组成，中间允许嵌套内容的标签
+            空标签：由开始标签组成并自动闭合的标签。
+            双标签与单标签
+            4.H5新特性标签（暂时不讲）
+     -->    
+     <div>
+        <a href="">跳转3</a>
+        <h1>今天天气真好</h1>
+        <h2>今天天气真好</h2>
+        <h3>今天天气真好</h3>
+        <h4>今天天气真好</h4>
+        <h5>今天天气真好</h5>
+        <h6>今天天气真好</h6>
+        <p><span style="color: red;">这是新的例子</span><span style="color: green;">这是新的例子</span>这是新的例子这是新的例子这是新的例子这是新的例子这是新的例子这是新的例子这是新的例子</p>
+        <p>这是<b>一段文字</b>这是一段文字这是一段文字<br>
+            这是这是这是一段文字
+            <strong>一段文字</strong>
+            这是<i>一段</i>文字这是<em>一段</em>文字这是一段文字
+        </p>
+        <p>这是<u>一段内容</u>这是<s>一段内容</s>这是<sub>一段内容</sub>这是一段内容<hr>这是<sup>一段内容</sup>这是一段内容这是一段内容这是一段内容这是一段内容这是一段内容</p>
+        <!-- 列表 -->
+        <ul type="disc">
+            <li>内容一</li>
+            <li>内容二</li>
+            <li>内容三</li>
+        </ul>
+        <ol type="1" start="1" reversed>
+            <li>内容一</li>
+            <li>内容二</li>
+            <li>内容三</li>
+            <li>内容一</li>
+            <li>内容二</li>
+            <li>内容三</li>
+        </ol>
+        <a href="#">跳转2</a>
+        <a href="https://cn.bing.com/search?q=%e4%b8%9c%e5%8c%97%e8%99%8e%e5%92%ac%e6%ad%bb%e4%b8%9c%e5%8c%97%e8%b1%b9&efirst=0&ecount=50&filters=tnTID%3a%22DSBOS_02BF8D72F33E4A519C1FAC03EC7E9EE8%22+tnVersion%3a%223ea8b9eded9f45278f91498ed63acf1d%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnOrder%3a%220dc640fd-dec9-49da-8c6f-750d16fc4f9c%22&form=HPNN01">跳转1</a>
+     </div>
+</body>
+</html>

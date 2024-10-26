@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        标签：
+        按照是否换行区分：
+            块级元素：可以修改宽高 独占一行
+            行内元素：在一行展示 设置宽高无效
+            行内块元素：在一行展示 可以修改宽高
+
+     -->
+     <div>这是一个块级元素</div>
+     <hr>
+     <span>1</span>
+     <span>2</span>
+     <span>3</span>
+     <hr>
+     <input type="text" placeholder="请输入内容信息1">
+     <input type="text" placeholder="请输入内容信息2">
+     <input type="text" placeholder="请输入内容信息3">
+     <hr>
+     <!-- 图片 img
+        属性：
+            src:放置图片路径
+                同级路径 ./
+                上级路径 ../
+                a.从网上获取的图片 绝对路径
+                b.从本地获取的图片 相对路径
+            alt:当图片无法展示时 所展示的替换文字
+            什么情况下图片无法加载？
+            1.网速过慢
+            2.图片侵权或者违禁
+    -->
+    <img src="../images/1.jpg" alt="风景图">
+    <!-- <img src="./images/1.jpg" alt=""> -->
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.466bb61cd7cf4e8b7d9cdf645add1d6e?rik=YRZKRLNWLutoZA&riu=http%3a%2f%2f222.186.12.239%3a10010%2fwmxs_161205%2f002.jpg&ehk=WEy01YhyfNzzQNe1oIqxwgbTnzY7dMfmZZHkqpZB5WI%3d&risl=&pid=ImgRaw&r=0" alt="">
+    <!-- 图文混排列表 块级元素 -->
+    <dl>
+        <!-- dt 放置图片 -->
+        <dt>
+            <img src="../images/1.jpg" alt="">
+        </dt>
+        <!-- dd 放置文字 -->
+        <dd>
+            这是一张风景图
+        </dd>
+    </dl>
+    <dl>
+        <!-- dt 放置图片 -->
+        <dt>
+            <img src="../images/1.jpg" alt="">
+        </dt>
+        <!-- dd 放置文字 -->
+        <dd>
+            这是一张风景图
+        </dd>
+    </dl>
+</body>
+</html>

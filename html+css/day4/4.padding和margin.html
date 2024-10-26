@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background: #0f0;
+            /* margin-left: 100px; */
+            padding: 20px;
+            border:2px solid #f00;
+            /* margin: 30px 50px 80px 100px; */
+        }
+        /* 
+            margin 外边距 复合属性 边框外面
+            一个值：上下左右
+            两个值：上下 左右
+            三个值：上 左右 下
+            四个值：上 右 下 左
+            margin-left 左
+            margin-right 右
+            margin-top 上
+            margin-bottom 下
+            padding 内边距 复合属性 内容和边框之间
+            一个值：上下左右
+            两个值：上下 左右
+            三个值：上 左右 下
+            四个值：上 右 下 左
+            padding-left 左
+            padding-right 右
+            padding-top 上
+            padding-bottom 下
+        */
+        p {
+            text-indent: 2em;
+        }
+        p span {
+            margin-left: 37px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        这是一段文字
+    </div>
+    <p>这是一段文字这是一段文字这是一段文字这是一段文字<br>
+        <span>这是一段文字这是一段文字这是一段文字</span></p>
+</body>
+</html>

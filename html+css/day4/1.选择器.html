@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通配符选择器 * 对全局做匹配 */
+        * {
+            list-style: none;
+            /* font-size:30px; */
+        }
+        /* 标签选择器 */
+        div {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+        /* id选择器 */
+        #word {
+            color: #00f;
+        }
+        /* 类选择器 */
+        .name {
+            color: #0f0;
+        }
+        /* 包含选择器 后代选择器 */
+        .name span {
+            color: #f00;
+        }
+        /* 伪类选择器 */
+        .list1 li:nth-child(2){
+            color: #f00;
+        }
+        .list1 li:first-child{
+            color: #00f;
+        }
+        .list1 li:last-child {
+            color:#0f0;
+        }
+        .list1 li:nth-child(odd) {
+            color: #ff0;
+        }
+        ul li:hover {
+            color: orange;
+        }
+        /* 子类选择器 用>连接 */
+        .name>span {
+            color: #00f;
+        }
+        /* 群组选择器 用,连接 */
+        #word,.name {
+            color:red;
+        }
+        /* .name {
+            color: red;
+        } */
+        /* 属性选择器
+            写法：
+            在body标签中：当前标签的属性里添加xxx(内容)
+            在style中：
+                标签名[属性="xxx"]{样式...}
+        */
+        img[alt="www"] {
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            伪元素选择器
+            :before :after
+            一定要伴随这 content:"要添加的内容"
+            ::before ::after
+            :与::的区别
+            ::使用在css2语法中
+            :使用在css3语法中
+
+        */
+        .one {
+            width: 400px;
+            height: 200px;
+            background: #ff0;
+        }
+        .one:after {
+            content:"今天下雪了";
+            color: #f00;
+            background-color: #0f0;
+        }
+        .one:before {
+            content:"明天周五了";
+            color: #00f;
+        }
+        /* !important */
+        .list2 li:nth-child(2) {
+            color: #f00 !important;
+        }
+        .list2 li:nth-child(2) {
+            color: #00f;
+        }
+        /* 相邻选择器 用+连接 */
+        h1+h2 {
+            color: red;
+        }
+        h2+h3 {
+            color: #00f;
+        }
+        /* 兄弟选择器 用~连接 */
+        h1~h3 {
+            color: #0f0;
+        }
+        h2~h5 {
+            color: purple;
+        }
+        #word~.name{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        标签选择器:
+            写法：标签名 {样式}
+     -->
+     <div></div>
+     <p id="word">这是一段文字</p>
+     <p class="name">我的<span>名字</span></p>
+     <ul class="list1">
+        <li>内容1</li>
+        <li>内容2</li>
+        <li>内容3</li>
+        <li>内容4</li>
+     </ul>
+     <img src="../day3/images/1.jpg" alt="www">
+     <div class="one">这是内容一</div>
+     <ul class="list2">
+        <li>内容11</li>
+        <li>内容22</li>
+        <li>内容33</li>
+        <li>内容44</li>
+     </ul>
+     <h1>标签</h1>
+     <h2>标签</h2>
+     <h3>标签</h3>
+     <h4>标签</h4>
+     <h5>标签</h5>
+</body>
+</html>
