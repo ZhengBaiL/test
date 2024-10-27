@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'This is a car';
+        // str.toUpperCase()
+        // str.toLowerCase()
+        // str.trim()
+        // str.concat(str1)
+        // 通过长度 length
+        console.log(str.length);
+        //indexof 当前内容首次在字符串中出现的下标索引位置
+        console.log(str.indexOf("is"));
+        //lastIndexof 查找当前内容在字符串中最后出现的下标索引位置
+        console.log(str.lastIndexOf("is"));
+        // slice 截取 不会改变原字符串
+        // 一个值 从当前的下标位置开始截取到最后； 从前往后 下标从0开始；从后往前 下标从-1开始
+        // 两个值 第一个是开始截取的下标位置，第二个是截取完成的下标位置（但是不包含本身）
+        console.log(str.slice(-6,-2),'截取');
+        // substring 截取 不会改变原字符串
+        // 一个值 从当前下标截取到最后
+        // 两个值 第一个是开始截取的下标位置，第二个是截取完成的下标位置（但是不包含本身）
+        console.log(str.substring(4,8))
+        // substr 不会改变原字符串
+        // 一个值 从当前下标截取到最后
+        // 两个值 第一个当前下标截取 第二个截取长度
+        console.log(str.substr(5,3));
+        console.log(str,'字符串');
+        // replace("要替换的值","替换成什么内容")
+        console.log(str.replace("a","cccc"));
+        // split 字符串转数组
+        // 用逗号隔开
+        console.log(str.split(","));
+        // chatAt 查找当前下标的字符
+        console.log(str.charAt(6));
+    
+
+
+
+
+    </script>
+</body>
+</html>

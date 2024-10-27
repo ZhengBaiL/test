@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">点击</a>
+    <script>
+        var a = document.querySelector("a");
+        a.onclick = function(eve) {
+            alert("今天天气站好！");
+            // 阻止默认事件
+            // eve.preventDefault();
+            // IE阻止默认事件
+            eve.returnValue = false;
+        }
+    </script>
+</body>
+</html>

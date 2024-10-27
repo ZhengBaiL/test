@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        基本数据类型：undefined null string number boolean
+        引用数据类型：object array function
+        堆和栈
+        栈：系统自动分配 基本数据类型 修改是值 （引用的指针） 
+        堆：用户进行分配 引用数据类型 修改的地址
+     -->
+     <script>
+        var a = 5;
+        b = a;
+        b = 25;
+        console.log(a,'a')
+
+        var obj = {
+            aa: 24,
+            bb: 25,
+            cc: 26
+        }
+        var obj1 = obj;
+        obj1.aa = 34;
+        console.log(obj.aa)
+     </script>
+</body>
+</html>

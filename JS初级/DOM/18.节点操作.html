@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p class="first">
+            <span>我是第一</span>
+        </p>
+        <ol id="list">
+            <li>内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+            <li>内容4</li>
+            <li>内容5</li>
+        </ol>
+    </div>
+    <script>
+        var box = document.getElementById("box");
+        var first = document.querySelector(".first");
+        var list = document.getElementById("list");
+        console.log(first)
+        // childNodes 子节点
+        console.log(box.childNodes[1].innerHTML);
+        // 创建节点 document.createElement("想要创建的标签")
+        var news = document.createElement("h3");
+        news.innerText = '这是一个h3标签';
+        console.log(news);
+        // 插入 insertBefore(插入的内容,插入位置)
+        // box.insertBefore(news,first)
+        box.insertBefore(news,list);
+        var a = document.createElement("span")
+        a.innerHTML = 'aaaa';
+        first.insertBefore(a,first[0])
+        // 需求：创建一个无序列表 并将它显示在页面上
+        // 添加节点 xxx.appendChild(xxx)
+        var uls = document.createElement("ul");
+        var lis = document.createElement("li");
+        var li1 = document.createElement("li");
+        li1.innerText = '第二个';
+        lis.innerText = '第一个';
+        uls.appendChild(lis);
+        uls.insertBefore(li1,lis);
+        console.log(uls);
+        box.appendChild(uls);
+        // 删除节点 xxx.removeChild(要删除的内容)
+        box.removeChild(uls);
+        // 替换节点 xxx.replaceChild(新节点,旧节点)
+        var other = document.createElement("h1");
+        other.innerText = '新的标题';
+        // 删除全部 remove xxx.remove()
+        box.replaceChild(other,news)
+        box.remove();
+    </script>
+</body>
+</html>

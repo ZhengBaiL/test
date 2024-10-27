@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        #container {
+            width: 590px;
+            height: 470px;
+            margin: 150px auto;
+            position: relative;
+        }
+        .selected {
+            display: none;
+        }
+        .choose {
+            display: block;
+        }
+        #list {
+            overflow: hidden;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+        }
+        #list li {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            background: #00f;
+            color: #fff;
+            margin-left: 7px;
+        }
+        #list .active {
+            background-color: #f00;
+            color: #ff0;
+        }
+        #prev,#next {
+            width: 60px;
+            height: 40px;
+            background-color: purple;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            display: none;
+        }
+        #prev {
+            position: absolute;
+            left: 0;
+            top:204px;
+        }
+        #next {
+            position: absolute;
+            right: 0;
+            top:204px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="imgBox">
+            <img src="./images/1.jpg" class="selected choose" alt="">
+            <img src="./images/2.jpg" class="selected" alt="">
+            <img src="./images/3.jpg" class="selected" alt="">
+            <img src="./images/4.jpg" class="selected" alt="">
+            <img src="./images/5.jpg" class="selected" alt="">
+        </div>
+        <ul id="list">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <div id="prev">
+            <span>&lt;</span>
+        </div>
+        <div id="next">
+            <span>&gt;</span>
+        </div>
+    </div>
+    <script src="./7.轮播.js"></script>
+</body>
+</html>

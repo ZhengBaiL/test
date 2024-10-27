@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <div class="btn1">啊啊啊</div>
+    <script>
+        // 获取同一元素所有标签
+        console.log(document.querySelectorAll("span"));
+        console.log(document.querySelectorAll(".btn1"));
+        // console.log(document.getElementById("btn1"));
+        // 添加节点内容
+        var spanList = document.querySelectorAll("span");
+        spanList[2].innerText = '我的'
+    </script>
+  </body>
+</html>

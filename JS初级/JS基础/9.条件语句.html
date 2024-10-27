@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        1.if条件语句
+            if(执行的表达式) {
+                满足执行表达式 执行代码块里的内容
+            } else if(执行表达式) {
+                满足执行表达式 执行代码块里的内容
+            } else {
+                不满足表达式内容 执行代码块里的内容
+            }
+        2.switch(条件语句){
+            case 值：
+                执行的表达式;
+                break;
+            case 值：
+                执行的表达式;
+                break;
+                ...
+            default：
+                默认的表达式;
+                break;
+        }
+     -->
+    <script>
+      //   var a = "3";
+      //   if (a > 7) {
+      //     alert("大于7");
+      //   } else if (a == 7) {
+      //     alert("等于7");
+      //   } else if (a < 7) {
+      //     alert("小于7");
+      //   } else {
+      //     alert("非法数字");
+      //   }
+
+      var b = 9999;
+      if (b >= 1 && b <= 9) {
+        console.log("个位数");
+      } else if (b >= 10 && b <= 99) {
+        console.log("十位数");
+      } else if (b >= 100 && b <= 999) {
+        console.log("百位数");
+      } else {
+        alert("弹出值" + b);
+      }
+      //   switch(b) {
+      //     case 1:
+      //         console.log("个位数");
+      //         break;
+      //     case 10:
+      //         console.log("十位数");
+      //         break;
+      //     case 100:
+      //         console.log("百位数");
+      //         break;
+      //     default:
+      //         alert("弹出值" + b);
+      //         break;
+      //   }
+    </script>
+  </body>
+</html>

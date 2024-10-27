@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="btn">这是一个按钮</div>
+    <div class="vase">这是一个花瓶</div>
+    <p>这是一个p标签</p>
+    <ul id="list">
+      <li>内容</li>
+      <li>内容</li>
+      <li>内容</li>
+      <li>内容</li>
+    </ul>
+    <p class="time">
+      <span>17</span>天<span>20</span>小时<span>40</span>分<span>30</span>秒
+    </p>
+    <!-- DOM:Document Object Model 文档对象模型 -->
+    <script>
+      // 1.获取ID选择器
+      var btn = document.getElementById("btn");
+      console.log(btn);
+      // 2.获取类选择器 获取数组
+      var vase = document.getElementsByClassName("vase");
+      console.log(vase);
+      // 3.获取标签选择器 数组
+      var tag1 = document.getElementsByTagName("p");
+      console.log(tag1);
+      var tag2 = document.getElementsByTagName("div");
+      console.log(tag2);
+      // 4.通过css选择器 获取标签内容
+      var list = document.querySelector("#list");
+      console.log(list);
+      // 5.通过css选择器 获取所有标签内容 数组
+      var spans = document.querySelectorAll(".time span");
+      console.log(spans);
+    </script>
+  </body>
+</html>

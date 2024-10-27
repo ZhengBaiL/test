@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1 {
+            width: 180px;
+            padding: 20px;
+            background: #f00;
+            color: #ff0;
+            text-align: center;
+        }
+        #btn2 {
+            width: 180px;
+            padding: 20px;
+            background: #00f;
+            color: #0f0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #btn3 {
+            width: 180px;
+            padding: 20px;
+            background: #f00;
+            color: #ff0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        #btn4 {
+            width: 180px;
+            padding: 20px;
+            background: #00f;
+            color: #0f0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn1">这是一个开始按钮</div>
+    <div id="btn2">这是一个结束按钮</div>
+    <div id="btn3">这是一个新的按钮</div>
+    <div id="btn4">这是一个旧的按钮</div>
+    <!-- 
+        setInterval 定时器 规定时间内执行函数  setInterval(函数,时间)
+        clearInterval 清除定时器
+        setTimeout  延时器 规定时间后执行一次函数 setTimeout(函数,时间)
+     -->
+    <script>
+        // window.alert() => alert()
+        //  window.alert("警告框");
+        // window.confirm() => confirm()
+        //  window.confirm("确认框");
+        // window.prompt() => prompt()
+        //  window.prompt("提示框");
+        var timer1;
+        // 获取按钮
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function() {
+           timer1 = setInterval(function(){
+                console.log("执行一次")
+            },500)
+        }
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function() {
+            clearInterval(timer1)
+        }   
+        var timer2;
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = function() {
+          timer2 = setTimeout(function(){
+                console.log("这是新的按钮");
+            },3000)
+        }
+        var btn4 = document.getElementById("btn4");
+        btn4.onclick = function() {
+            clearTimeout(timer2);
+            alert("成功了");
+        }
+    </script>
+</body>
+</html>

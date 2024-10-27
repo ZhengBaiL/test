@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        循环语句
+            1.for循环
+            for(初始化变量;表达式;执行语句){
+                代码块
+                执行的表达式语句
+            }
+            2.while（执行语句）{....} 只有条件为真时 才会执行
+                break 终止循环  终止当前循环 立即跳出 switch里
+                continue 终止循环 终止此时的循环 继续执行下一层循环
+            3.do{...}while(执行语句) 无论是否满足执行条件 都会执行一次
+     -->
+    <script>
+      // for(var i=0;i<5;i++) {
+      //     console.log("当前循环的是第"+i+"遍");
+      // }
+      //   var a = 0;
+      //   var l = 10;
+      //   for (a; a < l; a++) {
+      //     console.log(a);
+      //   }
+      // for(var a=0,b=9;a<b;a++){
+      //     console.log(a);
+      // }
+        var a = 5;
+        while(a<=10) {
+          // document 根节点
+          document.write(a);
+          a++;
+          console.log("1")
+          // continue;
+          // break;
+        }
+      //   do while
+      // var a = 15;
+      // do {
+      //   document.write("当前的值是:" + a);
+      //   a++;
+      // } while (a < 14);
+    </script>
+  </body>
+</html>

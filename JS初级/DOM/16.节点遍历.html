@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="main">这是一个p标签</p>
+    <div class="box">这是第一个盒子</div>
+    <h2>
+      你的我的
+      <br />
+      他的他的
+    </h2>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <!-- 
+      // firstChild 第一个子节点
+      // lastChild 最后一个子节点
+      // previousSibling 上一个兄弟节点名称
+      // nextSibling 下一个兄弟节点名称
+      // nextElementSibling 下一个元素节点
+      // previousElementSibling 上一个元素节点 如果该节点为第一个节点 则获取值为null
+      // lastElementChild 最后一个子元素
+      // firstElementChild 第一个子元素
+     -->
+    <script>
+      var main = document.querySelector(".main");
+      var box = document.querySelector(".box")
+      var h2 = document.querySelector("h2");
+      var list = document.querySelector("#list");
+      // console.log(list.nextElementSibling)
+      // console.log(main.previousSibling);
+      // console.log(list.firstElementChild)
+      // console.log(list.lastChild.previousElementSibling.innerHTML)
+      // console.log(list.firstChild.nextSibling);
+      // console.log(list.firstElementChild)
+      /*
+        list.firstChild #text
+        list.firstChild.nextElementSibling li => 1
+        list.firstChild.nextElementSibling.nextSibling #text
+        list.firstChild.nextElementSibling.nextSibling.nextSibling li=>2
+      */
+      // console.log(list.firstChild.nextElementSibling.nextSibling.nextElementSibling);
+    </script>
+  </body>
+</html>

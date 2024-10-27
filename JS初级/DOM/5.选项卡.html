@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      #container {
+        width: 482px;
+        margin: 190px auto;
+        border: 1px solid #000;
+      }
+      #container #list {
+        overflow: hidden;
+      }
+      #container #list li {
+        float: left;
+        width: 120px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border: 1px solid #ccc;
+      }
+      .active {
+        width: 480px;
+        height: 300px;
+        text-align: center;
+        line-height: 300px;
+        font-size: 25px;
+        color: purple;
+        font-weight: 600;
+        border: 1px solid #f00;
+        display: none;
+      }
+      .selected {
+        background: #f00;
+        color: #ff0;
+      }
+      .choose {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <ul id="list">
+        <li class="selected">用户管理</li>
+        <li>配置管理</li>
+        <li>角色管理</li>
+        <li>定时任务补</li>
+      </ul>
+      <div id="main">
+        <div class="choose active">用户管理</div>
+        <div class="active">配置管理</div>
+        <div class="active">角色管理</div>
+        <div class="active">定时任务补</div>
+      </div>
+    </div>
+    <script>
+        var btn = document.querySelectorAll("#list li");
+        var contain = document.querySelectorAll(".active");
+        console.log(this,'this1')
+        for(var i=0;i<btn.length;i++) {
+            // 为了给每一个按钮添加点击事件
+            // 下标赋值
+            btn[i].index = i;
+            btn[i].onclick = function() {
+                console.log(this,'this2')
+                // 2.点击  恢复样式
+                for(var j=0;j<contain.length;j++) {
+                    // 4次
+                    btn[j].className = '';
+                    contain[j].className = 'active';
+                }
+                // this => 当前对象 =  btn[i]
+                // 添加selected样式
+                //  1.点击 改变颜色
+                this.className = 'selected';
+                // 添加choose样式
+                contain[this.index].className = 'choose active';
+            }
+        }
+
+    </script>
+  </body>
+</html>

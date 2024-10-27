@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p class="main1">0</p>
+    <div class="btn1">加一</div>
+    <br><br><br><br><br>
+    <div class="main2">1</div>
+    <div class="btn2">2倍</div>
+    <!-- 
+        闭包
+        什么是闭包:闭包 指 有权访问另一个函数内部的变量
+        * 什么是闭包：闭包的一大特性就是
+        内部函数总是可以访问其所在的外部函数中声明的参数和变量
+        外部变量不可以访问内部变量
+        - 函数嵌套函数
+        - 内部函数引用外部函数的局部变量
+        * 闭包的作用：
+        - 实现函数外部访问私有变量
+        - 避免全局变量的污染 实现封装
+        - 希望一个变量长期驻扎在内存中
+        * 闭包的缺点：容易引发内存泄漏
+    -->
+    <script>
+        /**经典写法*/
+        // function news() {
+        //     var today = '今天星期五';
+        //     return function() {
+        //         console.log(today)
+        //     }
+        // }
+        // var list = news();
+        // list();
+        
+        /**自调用写法*/
+        // var list = (function() {
+        //     var today = '天气真好';
+        //     return function() {
+        //         console.log(today)
+        //     }
+        // })()
+        // list();
+
+        // function a() {
+        //     console.log("1111")
+        // }
+        // a()
+        
+        // (function() {
+        //     console.log('222')
+        // })()
+        // 闭包用法
+        var uls = document.querySelector('ul');
+        var lis = document.querySelectorAll("ul li");
+
+        for(var i=0;i<lis.length;i++) {
+            // lis[i].onclick = function() {
+            //     console.log(i);
+            // } 
+            lis[i].onclick = (function() {
+                // console.log(i);
+                var item = i;
+                return function() {
+                    console.log(item)
+                }
+            })()
+        }
+        
+        // 计数器
+        var main1 = document.querySelector(".main1");
+        var main2 = document.querySelector(".main2");
+        var btn2 = document.querySelector(".btn2");
+        var btn1 = document.querySelector(".btn1");
+        var count2 = 1;
+            var count1 = 0;
+
+        function addCount() {
+           return function(main1){
+            count1++;
+            main1.innerHTML = count1;
+          }
+        }
+        var add = addCount()
+        btn1.onclick = function() {
+            add(main1)
+        }
+
+        var vase = (function(){
+            return function(main2) {
+                count2 = count2 * 2;
+                main2.innerHTML = count2;
+            }
+        })()
+        
+        btn2.onclick = function() {
+            vase(main2);
+        }
+        // btn1.addEventListener('click',function() {
+        //     count1++;
+        //     main1.innerHTML = count1;
+        // })
+
+        // btn2.addEventListener("click",function(){
+        //     count2 = count2 * 2;
+        //     main2.innerHTML = count2;
+        // })
+
+        for(var i=0;i<3;i++) {
+            console.log(i,'aa')
+            setTimeout(function(){
+                console.log(i);
+            },500)
+        }
+    </script>
+</body>
+</html>

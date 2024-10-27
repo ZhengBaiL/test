@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="btn">添加</div>
+    <!-- 事件委托: 减少内存消耗 避免多次循环 -->
+    <script>
+        var list = document.querySelectorAll("#list li")
+        var lis = document.getElementById("list");
+        var btn = document.getElementById("btn")
+        // console.log(list)
+        // for(var i=0;i<list.length;i++) {
+        //     console.log(list[i]);
+        //     list[i].onclick = function() {
+        //     }
+        // }
+        lis.onclick = function(event) {
+            // console.log(event);
+            if(event.target.nodeName == 'LI') {
+                console.log(event.target.innerHTML);
+            }
+        }
+        btn.onclick = function() {
+            var li1 = document.createElement("li");
+            li1.innerHTML = Math.round(Math.random() * 9 + 1);
+            lis.appendChild(li1);
+        }
+    </script>
+</body>
+</html>

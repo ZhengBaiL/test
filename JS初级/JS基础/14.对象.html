@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      // 1.定义对象
+      var obj = {};
+      // 对象名.对象属性名 = 属性值
+      obj.name = "lucy";
+      obj.address = "中国";
+      obj.age = 5;
+      console.log(obj.address);
+      // 2.定义对象
+      var obj1 = new Object();
+      obj1 = {
+        name: "LiLi",
+        age: 19,
+        address: "哈尔滨",
+      };
+      console.log(obj1);
+      // 遍历数组对象
+      var newList = [
+        {
+          name: "LiLi",
+          age: 19,
+          address: "哈尔滨",
+        },
+        {
+          name: "Lucy",
+          age: 29,
+          address: "北京",
+        },
+        {
+          name: "NaNa",
+          age: 39,
+          address: "天津",
+        },
+      ];
+      for (var i = 0; i < newList.length; i++) {
+        console.log(newList[i]);
+        document.write(newList[i].address + "<br>");
+      }
+
+      // break continue return
+      // function fn1(a,b) {
+      //     var sum = a + b;
+      //     console.log(sum)
+      // }
+      // fn1(2,3)
+
+      // function fn2(a,b) {
+      //     return a+b;
+      // }
+      // console.log(fn2(2,3));
+
+      // 调取对象中函数的方法   
+      var obj = {
+        name: "XMing",
+        age: 18,
+        tips: function (a, b) {
+          return console.log(a * b);
+        },
+      };
+      obj["tips"](2,3);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 500px;
+        height: 500px;
+        background: #f00;
+      }
+      .box2 {
+        width: 300px;
+        height: 300px;
+        background: #ff0;
+      }
+      .box3 {
+        width: 150px;
+        height: 150px;
+        background: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">
+        <div class="box3"></div>
+      </div>
+    </div>
+    <!-- 
+        事件的三个阶段：
+            事件捕获:由外向内触发的操作
+            目标阶段
+            事件冒泡:由内向外触发的操作
+
+            阻止事件冒泡：
+                event.stopPropagation()
+                IE浏览器阻止事件冒泡
+                event.cancelBubble = true
+     -->
+    <script>
+      var box1 = document.querySelector(".box1");
+      var box2 = document.querySelector(".box2");
+      var box3 = document.querySelector(".box3");
+      // box1.onclick = function(eve) {
+      //     eve.cancelBubble = true;
+      //     alert("这是第一个");
+      // }
+      // box2.onclick = function(eve) {
+      //     eve.stopPropagation();
+      //     alert("这是第二个");
+      // }
+      // box3.onclick = function(event) {
+      //     event.cancelBubble = true;
+      //     alert("这是第三个");
+      // }
+
+      // 填加监听事件
+      // xxx.addEventListener('监听的时间方法',执行的函数,触发的事件类型：true (事件捕获) / false（事件冒泡）)
+      box1.addEventListener(
+        "click",
+        function (eve) {
+          eve.stopPropagation();
+          alert("内容1");
+        },
+        false
+      );
+      box2.addEventListener(
+        "click",
+        function (eve) {
+            eve.cancelBubble = true;
+          alert("内容2");
+        },
+        false
+      );
+      box3.addEventListener(
+        "click",
+        function (eve) {
+          eve.stopPropagation();
+          alert("内容3");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

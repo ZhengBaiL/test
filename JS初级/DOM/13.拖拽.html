@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: #00f;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        e.clientX	事件发生时，鼠标在客户端区域的X坐标，客户端区域是指页面可视区域
+        e.clientY	事件发生时，鼠标在客户端区域的Y坐标
+     -->
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector(".box");
+        console.log(box.offsetLeft);
+        box.onmousedown = function(event) {
+            var left1 = event.clientX - box.offsetLeft;
+            var top1 = event.clientY - box.offsetTop;
+            box.onmousemove = function(event){
+                box.style.top = event.clientY - top1 + 'px';
+                box.style.left =  event.clientX - left1 + 'px';
+
+            }
+        }
+        box.onmouseup = function() {
+            box.onmousemove = null;
+        }
+    </script>
+  </body>
+</html>

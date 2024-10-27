@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        关系运算符
+            > < = >= <=
+        逻辑运算符：
+        || 或 只要两方有一方为真 则为真;两方都为假 才为假；
+        && 和 两方都成立才为真， 有一方为假 则为假；
+        ！ 非 返回相反值; 与等于号一起使用时 => 不等于
+
+
+     -->
+     <script>
+        console.log(2<3 || 5<4); // true 
+        console.log(2>3 || 5<4); // false
+
+
+        console.log(6>4 && 7<3);// false
+        console.log(6>4 && 7>3);// true
+
+        console.log(!true); // false
+        console.log(!0); // true
+        console.log( 5 != 2); // true
+
+        if(false == 0) {
+            console.log("♥相等")
+        } else {
+            console.log("♥不相等")
+        }
+
+     </script>
+     <!-- 特殊符号 
+            &nbsp; 半格
+            &lt;   小于
+            &gt;   大于
+            &reg   商标
+    -->
+    这是&nbsp;一段&lt;文字&gt;&reg;
+</body>
+</html>

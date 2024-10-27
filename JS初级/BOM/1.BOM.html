@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JS
+        ECMAScript => es6
+        BOM 浏览器对象模型
+        DOM 文档对象模型
+    -->
+    <button id="btn1">往下走</button>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <h3>哈哈哈哈哈</h3>
+    <button id="btn2">往上走</button>
+    <script>
+      // document 根节点
+      // scrollTo(x,y) 距离窗口进行跳转
+      // scrollBy(x,y) 距离自身的位置跳转
+      // 先获取按钮
+      // 1.获取id名称的元素
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      console.log(btn1);
+      //2.添加点击事件
+      btn1.onclick = function () {
+        // 定时器：setInterVal(函数,时间) 间隔一段时间执行函数
+        // 清除定时器方法 clearInterval()
+        var timer = setInterval(function () {
+          var scrollTop =
+            document.body.scrollTop || document.documentElement.scrollTop;
+          console.log(scrollTop);
+          if (scrollTop <= 1800) {
+            scrollBy(0, 200);
+          } else {
+            clearInterval(timer);
+            alert("到底了!");
+          }
+        }, 1000);
+      };
+      btn2.onclick = function() {
+        var timer = setInterval(function(){
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if(scrollTop > 0) {
+                scrollBy(0,-200);
+            } else{
+                clearInterval(timer);
+                alert("到顶了！")
+            }
+        },1000)
+      }
+    </script>
+  </body>
+</html>

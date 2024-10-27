@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #00f;
+        }
+        button {
+            margin-top: 40px;
+        }
+        .vase {
+            width: 50px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            background: purple;
+            color: #fff;
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button>改变颜色</button>
+    <ul>
+        <li>12</li>
+        <li>34</li>
+        <li>56</li>
+        <li>78</li>
+    </ul>
+    <div class="vase">改变</div>
+    <script>
+        var btn = document.querySelector("button");
+        var box = document.querySelector(".box");
+        var lis = document.querySelectorAll("ul li");
+        var vase = document.querySelector(".vase");
+        btn.onclick = function() {
+            box.style.marginLeft = 100 + 'px';
+            box.style.background = 'red';
+        }
+        vase.onclick = function() {
+            lis[0].style.background = 'red';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <p id="main">11111</p>
+    <div id="list">
+        <p>hello world</p>
+        <!-- <input type="text" name="" id=""> -->
+    </div>
+    <script>
+        var box = document.getElementById("box");
+        var main = document.querySelector("#main");
+        var list = document.querySelector("#list");
+        console.log(box.nodeName); // 节点名字
+        console.log(main.nodeName);
+        console.log(main.nodeValue); // null 节点值
+        console.log(main.nodeType); // 节点类型 1
+        // 往元素中添加内容
+        // innerHTML 从开始内容到结束内容 全部展示 包括HTML标签
+        // innerText 从开始内容到结束内容 全部展示 不包含HTML标签
+        box.innerHTML = '这是一个盒子';
+        main.innerText = '这是主要的内容';
+        alert(list.innerHTML);
+        alert(list.innerText);
+        /*
+            document是没有nodeValue的：null
+            元素节点是没有nodeValue的：null
+            属性节点id的nodeValue：d1
+            内容节点的nodeValue：hello HTML DOM
+        */
+        // 单行注释
+        /* 多行注释 */
+    </script>
+</body>
+</html>

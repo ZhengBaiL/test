@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        需求：
+            输入年份  判断年份是平年还是闰年并弹出结果?
+            判断平年（common year）和闰年（leap year）的计算方法很简答： 
+            1. 如果年份是整百年份，用年份除以400，没有余数即为闰年，有余数即为平年。
+            2. 如果年份不是整百年份，用年份除以4，没有余数即为闰年，有余数即为平年。 
+            说明：2096年和2104年都是闰年，但2100年是平年。
+     -->
+     <script>
+        var year = prompt("请输入年份");
+        if((year %  400 == 0) || (year % 100 != 0 && year % 4 == 0)) {
+            alert("该年份是闰年")
+        } else {
+            alert("该年份是平年")
+        }
+     </script>
+</body>
+</html>

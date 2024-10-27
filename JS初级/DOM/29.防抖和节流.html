@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background: #ff0;
+            color: #f00;
+            font-size: 30px;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // var box = document.querySelector(".box");
+        // var i = 1;
+        // function count() {
+        //     // i++ 先赋值 后自增
+        //     box.innerHTML = i++;
+        // }
+        // box.addEventListener("mousemove",count);
+        /**
+         * 防抖和节流
+         * 防抖:
+         *  优点:就是指触发事件在n秒内只执行一次函数；
+         *  缺点:如果在规定的时间内不断触发 我们的方法就会不断延迟;
+         * 节流：
+         *   指在规定n秒连续点击事件但只执行一次;
+        */
+        /**防抖代码*/
+        var box = document.querySelector(".box");
+        var i = 1;
+        function count() {
+            // i++ 先赋值 后自增
+            box.innerHTML = i++;
+        }
+        // 防抖函数部分
+        function debounce(fn,time) {
+            var timer = null;
+            return function() {
+                if(timer) clearTimeout(timer);
+                timer = setTimeout(function(){
+                    fn();
+                },time);
+            }
+        }
+        box.addEventListener("click",debounce(count,500));
+        /**节流代码*/
+        // var box = document.querySelector(".box");
+        // var i = 1;
+        // function count() {
+        //     // i++ 先赋值 后自增
+        //     box.innerHTML = i++;
+        // }
+        // function throttle(fn,time) {
+        //     var timer = null;//没有值
+        //     return function() {
+        //         if(!timer) { //没有值
+        //             timer = setTimeout(function(){
+        //                 fn();
+        //                 timer = null;
+        //             },time)
+        //         } 
+        //     }
+        // }
+        // box.addEventListener("click",throttle(count,1000));
+        /**
+         * 防抖和节流的区别：
+         * 节流:轮播图数表多次点击，鼠标移动，页面尺寸，滚动事件...
+         * 防抖:输入框搜索...
+        */
+    </script>
+</body>
+</html>

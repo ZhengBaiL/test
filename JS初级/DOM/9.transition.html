@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            transition: width 5s ease;
+        }
+        .box:hover {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        动画：
+         过渡效果
+        transition:property duration timing-function delay;
+        transition-property：执行名称
+        transition-duration: 执行过渡效果的时间
+        transition-timing-function: 运动曲线
+            linear 匀速 
+            ease 规定慢速开始，然后变快，然后慢速结束的过渡效果（
+            ease-in 规定以慢速开始的过渡效果
+            ease-out 规定以慢速结束的过渡效果
+            ease-in-out 规定以慢速开始和结束的过渡效果
+        transition-delay: 延长时间
+    -->
+    <div class="box"></div>
+</body>
+</html>

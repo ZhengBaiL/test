@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var screenWidth =
+        document.body.clientWidth || document.documentElement.clientWidth;
+      var screenHeight =
+        document.body.clientHeight || document.documentElement.clientHeight;
+
+      // 构造函数中写属性
+      function Leaf() {
+        // 图片的宽度
+        this.width = Math.random() * 100 + 100; //100~200
+        // 图片距离顶部位置
+        this.tops = 0;
+        // 图片距离左侧的位置
+        this.newLeft = Math.random() * (screenWidth - this.width);
+        // 图片的路径
+        this.newImg = "./img/" + Math.floor(Math.random() * 4 + 1) + ".png";
+      }
+
+    //原型上写方法 初始化树叶
+    Leaf.prototype.init = function() {
+        // 创建标签
+        var imgs = document.createElement("img");
+        // 给图片路径
+        imgs.src = this.newImg;
+        imgs.style.width = this.width + 'px';
+        imgs.style.top = this.tops + 'px';
+        imgs.style.left = this.newLeft + 'px';
+        this.img = imgs;
+        document.body.appendChild(imgs);
+    }
+    // 页面展示图片
+    var newArr = [];
+    for(var i=0;i<20;i++) {
+        var newLeaf = new Leaf();
+        newArr.push(newLeaf);
+        newLeaf.init();
+    }
+    // 下落树叶的方法
+    Leaf.prototype.fall = function() {
+        setTimeout(function(){
+            var timer = setInterval(function(){
+                if(this.img.offsetTop < screenHeight - this.img.offsetHeight) {
+                    this.img.style.top = this.img.offsetTop + 10 + 'px';
+                } else {
+                    clearInterval(timer);
+                }
+                console.log(this)
+            }.bind(this),20)
+        }.bind(this)   
+        ,Math.random()*2000)
+    }
+    // 点击树叶下落
+    document.onclick = function() {
+        for(var i=0;i<newArr.length;i++) {
+            newArr[i].fall();
+        }
+    }
+    </script>
+  </body>
+</html>

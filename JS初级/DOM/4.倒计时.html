@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 300px;
+        margin: 190px auto;
+        font-size: 24px;
+      }
+      p span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      倒计时：<span>0</span>天<span>0</span>小时<span>0</span>分<span>0</span>秒
+    </p>
+    <script>
+      function showTime() {
+        // innerText 添加内容文本
+        var spans = document.querySelectorAll("span");
+        // 结束时间戳
+        var endTime = new Date("2024-2-9 12:00").getTime();
+        // 开始时间戳
+        var beginTime = new Date().getTime();
+        // 相差的秒数 => 秒数的时间戳
+        var diffTime = (endTime - beginTime) / 1000;
+        // 天
+        var day = parseInt(diffTime / 60 / 60 / 24);
+        // 时
+        var hours = parseInt((diffTime / 60 / 60) % 24);
+        // 分
+        var minutes = parseInt((diffTime / 60) % 60);
+        // 秒
+        var seconds = parseInt(diffTime % 60);
+        spans[0].innerText = day;
+        spans[1].innerText = hours;
+        spans[2].innerText = minutes;
+        spans[3].innerText = seconds;
+      }
+      setInterval(showTime, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        JS数据类型：
+            基本数据类型：
+                Null Undefined Number Boolean String
+            引用数据类型
+                Object Array Function
+     -->
+    <script>
+        let obj = {
+            name: 'Lucy',
+            age: 10
+        }
+        let arr = [1,2,3,4,5,6];
+        function fn1() {
+            return "哈哈哈"
+        }
+        // 1.typeof
+        // 能判断出： undefined string number boolean function
+        // 不能判断出： null object array
+        // console.log(typeof null); // object
+        // console.log(typeof undefined); // undefined
+        // console.log(typeof '1'); // string
+        // console.log(typeof 3); // number
+        // console.log(typeof true);// boolean
+        // console.log(typeof obj); // object
+        // console.log(typeof arr); // object
+        // console.log(typeof fn1); // function
+        
+        // 2.obj(任意值) instanceof Object类型
+        //  console.log(obj instanceof Object); // true
+        //  console.log(arr instanceof Array); // true
+        //  console.log(fn1 instanceof Function); // true
+
+
+        // 3.Object.prototype.toString.call()
+        // console.log(Object.prototype.toString.call(1));// [Object Number]
+        // console.log(Object.prototype.toString.call("21"));// [Object String]
+        // console.log(Object.prototype.toString.call(true));// [Object Boolean]
+        // console.log(Object.prototype.toString.call(undefined));// [Object Undefined]
+        // console.log(Object.prototype.toString.call(null));// [Object Null]
+        // console.log(Object.prototype.toString.call(fn1));// [Object Function]
+        // console.log(Object.prototype.toString.call(arr));// [Object Array]
+        // console.log(Object.prototype.toString.call(obj));// [Object Object]
+
+        // 4.constructor 
+        // 不判断null和undefined
+        console.log(false.constructor === Boolean); // true
+        console.log((1).constructor === Number); // true
+        console.log('2121'.constructor === String); // true
+        console.log(obj.constructor === Object); //true
+        console.log(arr.constructor === Array); //true
+        console.log(fn1.constructor === Function); //true
+        // console.log(null.constructor === null); //报错
+        // console.log(undefined.constructor === undefined); // 报错
+
+        
+
+    </script>
+</body>
+</html>

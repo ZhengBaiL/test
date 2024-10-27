@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        #container {
+            width: 480px;
+            margin: 120px auto;
+        }
+        #list {
+            overflow: hidden;
+        }
+        #list li {
+            float: left;
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ccc;
+        }
+        .selected {
+            background: #f00;
+            color: #ff0;
+        }
+        .main .active {
+            width: 480px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            color: purple;
+            border: 1px solid #f00;
+            display: none;
+        }
+        .main .choose {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="list">
+            <li class="selected">选项一</li>
+            <li>选项二</li>
+            <li>选项三</li>
+            <li>选项四</li>
+        </ul>
+        <div class="main">
+            <div class="active choose">1</div>
+            <div class="active">2</div>
+            <div class="active">3</div>
+            <div class="active">4</div>
+        </div>
+    </div>
+    <script>
+        //点击按钮 清掉已有样式 给所点击的项添加样式 
+        var btn = document.querySelectorAll("#list li");
+        var contain = document.querySelectorAll(".main div");
+        for(var i=0;i<btn.length;i++){
+            btn[i].index = i;
+            btn[i].onclick = function() {
+                for(var j=0;j<contain.length;j++) {
+                    btn[j].className = '';
+                    contain[j].className = 'active';
+                }
+                console.log(this)
+                this.className = 'selected';
+                contain[this.index].className = 'active choose';
+            }
+        }
+
+    </script>
+</body>
+</html>

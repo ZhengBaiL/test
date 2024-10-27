@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        function（声明） 名字(形参) {
+            代码块
+        }
+        函数的命名规则与变量相同
+        调用函数：
+         名字(实参)
+     -->
+    <script>
+        // 全局变量
+        // 局部变量
+        var sum = 1;
+        function fn1() {
+            var and = 2;
+            document.write("这是我的第一个函数"+sum)
+        }
+        // 使用时 必须调用
+        fn1();
+        // document.write(and)
+
+
+        function fn2(a,b) {
+            var sum1 = a + b;
+            document.write("传入的和是:" + sum1);
+        }
+        fn2(11,12);
+
+    </script>
+</body>
+</html>

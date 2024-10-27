@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        
+        JS 是 弱语言类型
+        数据 决定 类型
+        js的类型：
+            基本数据类型:number(数字) string(字符串) boolean(布尔:true/false) undefined(未定义) null(空)
+            引用数据类型:object(对象{}/数组[]/null)
+        判断数据类型的：
+            typeof
+     -->
+    <script>
+        // var a = 10;
+        // console.log(a,'a');
+        // console.log(typeof a);
+        // var b = '10'; 
+        // console.log(b,'b');
+        // console.log(typeof b);
+        // var c1 = true;
+        // console.log(typeof c1);
+        // var c2 = false;
+        // console.log(typeof c2);
+        // var d;
+        // console.log(typeof d);
+        // d = '新的';
+        // console.log(typeof d);
+        var obj = {};
+        console.log(typeof obj)
+        var obj1 = [];
+        console.log(typeof obj1)
+        var obj2 = null;
+        console.log(typeof obj2)
+        var obj3 = undefined;
+        console.log(typeof obj3)
+        // null和undefined
+        if(1 === '1') {
+            alert("♥相等")
+        } else {
+            alert("♥不相等")
+        }
+        // = == === 区别
+        // = 赋值
+        // == 相等 强制转换类型 特别：null == undefined
+        // === 全等于 没有类型转换 必须全部相同 
+    </script>
+</body>
+</html>

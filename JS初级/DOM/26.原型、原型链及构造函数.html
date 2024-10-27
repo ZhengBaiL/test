@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        // 普通函数 this指向window
+        function fn1() { 
+            console.log(this,"1");
+        }
+        fn1();
+        /** 构造函数：初始化对象
+         * 1.this指向当前对象本身 
+         * 2.首字母大写
+         * 3.使用时 必须通过new去调用
+         * 4.返回值不用return
+         * */
+        /**
+         * 属性 写在构造函数下
+         * 方法 写在原型下
+        */
+        function Person(name,age) {
+            // console.log(this,'2')
+            this.name = name;
+            this.age = age;
+            console.log(this.name,'name');
+            console.log(this.age,'age')
+            Person.prototype.eat = function() {
+                console.log("该吃午饭了"+this.name);
+            }
+        }
+        // new 实例化
+       var p1 = new Person("赵家锐",0); // constructor prototype
+       console.log(p1);
+       console.log(p1.eat());
+        //console.log('原型的最终结果',p1.__proto__.__proto__.__proto__); //null
+        // new Person();
+        /**
+         * 原型
+         * 1.构造函数中自带了constructor(构造器)和prototype(原型对象/显式的方法)
+         * 2.constructor 指向的是 prototype 的构造函数
+         * 3.__proto__和prototype是等价的
+        */
+        /**
+         * 原型链：
+         * 访问对象属性时 先上对象本身的属性去找
+         * 通过__proto__（原型自带的一个隐式方法）去构造函数上找
+         * 若还未找到 则在原型对象prototype上去找 若在为找到 则返回null
+        */
+     </script>
+</body>
+</html>

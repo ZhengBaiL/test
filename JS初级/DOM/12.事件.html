@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 700px;
+            height: 200px;
+            background: #f00;
+        }
+        .box1 {
+            width: 200px;
+            height: 100px;
+            background-color: #ff0;
+        }
+        input {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <input type="text" placeholder="请输入内容" id="inp">
+    <script>
+        var box = document.querySelector(".box");
+        var box1 = document.querySelector(".box1");
+        var inp = document.getElementById("inp");
+        box.onclick = function() {
+            console.log("点击事件")
+        }
+        box.ondblclick = function() {
+            console.log("双击事件")
+        }
+        box.onmousedown = function() {
+            console.log("鼠标按下")
+        }
+        box.onmouseup = function() {
+            console.log("鼠标抬起")
+        }
+        box.onmousemove = function() {
+            console.log("鼠标划过")
+        }
+        box.onmouseout = function() {
+            console.log("鼠标划出")
+        }
+        box1.onmouseover = function() {
+            console.log("当鼠标移动到某对象范围的上方时触发此事件")
+        }
+        inp.onkeydown = function(event) {
+            console.log("键盘按下",event.keyCode)
+            if(event.keyCode == '13' ) {
+                alert("开始搜索")
+            }
+        }
+        inp.onkeyup = function() {
+            console.log("键盘抬起")
+        }
+        inp.onkeypress = function() {
+            console.log("键盘按下并抬起事件")
+        }
+    </script>
+</body>
+</html>

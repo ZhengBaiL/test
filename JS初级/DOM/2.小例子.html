@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">这是一个按钮</div>
+    <div id="box"></div>
+    <hr>
+    <div id="list">
+        <div class="a">今天</div>
+        <div class="b">明天</div>
+        <div class="c">后天</div>
+    </div>
+    <button>改变</button>
+    <script>
+        var btn = document.querySelector(".btn");
+        // var btn = document.getElementById("btn");
+        console.log(btn,'btn')
+        var box = document.getElementById("box");
+        btn.onclick = function(){
+        console.log("点击");
+            box.style.background = 'red';
+        }
+        var btn1 = document.querySelector("button");
+        var a = document.querySelector(".a");
+        var b = document.querySelector(".b");
+        var c = document.querySelector(".c");
+        btn1.onclick = function() {
+            a.style.fontSize = '30px';
+            a.style.color = 'red';
+            b.style.fontWeight = '600';
+            b.style.color = 'green';
+            c.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

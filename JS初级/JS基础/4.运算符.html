@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- + - * /  %(取余/模)-->
+    <script>
+        var a = 1;
+        var b = 2;
+        var c = 10;
+        var d = 5;
+
+        // console.log(a+b);//3
+        // console.log(c-b);//8
+        // console.log(a*b);//2
+        // console.log(b/a);//2
+        // console.log(d % c); // 取低段位的值
+        // console.log(b % c);
+        // console.log(a % c);
+        // console.log(c % c);
+
+        // console.log(a + '2'); // 加法运算中 number + string 拼接
+        // console.log(a + c); // 11
+        // console.log('3' + '12'); // 加法运算中 string + string 拼接
+        // console.log(d + true);// 6 加法运算中 true = 1;false = 0; 
+        // console.log(b + null); // 2
+        // console.log(a + undefined); // NaN 非法数字
+
+        // console.log(c-b); // 8
+        // console.log(c - '4'); // 在减法运算中 string 与 number 执行运算规则
+        // console.log(c - 'hahahaha'); // NaN
+        // console.log(c - '哈哈哈');// NaN
+
+        // console.log(c - true); // 9 
+        // console.log(c - null);// 10
+        // console.log(c - undefined); // NaN
+
+        console.log(c * 2); //20
+        console.log(c * '2'); //在乘法运算中 string 与 number 执行运算规则
+        console.log(c * false);// 0
+        console.log(c * null); // 0
+        console.log(c * undefined)// NaN
+
+
+        console.log(c / 2);//5
+        console.log(c / '5'); //2 在除法运算中 string 与 number 执行运算规则
+        console.log(c / true); //10
+        console.log(c / false) //Infinity
+        console.log(c / null); //Infinity
+        console.log(c / undefined); // NaN
+
+    </script>
+</body>
+</html>

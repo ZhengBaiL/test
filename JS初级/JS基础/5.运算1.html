@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 5;
+        var b;
+
+        // 1.a++ 先赋值 后自增
+        b = a++;
+        console.log(a,'a'); // 6
+        console.log(b,'b'); // 5
+
+        // 2.++a 先自增 在赋值
+        b = ++a;
+        console.log(a,'a'); //7
+        console.log(b,'b'); //7
+
+        // 3.--a 先自减 在赋值
+        b = --a;
+        console.log(a,'a'); //6 
+        console.log(b,'b'); //6
+
+        // 4.a-- 先赋值 在自减
+        b = a--;
+        console.log(a,'a'); // 5
+        console.log(b,'b'); // 6 
+
+
+    </script>
+</body>
+</html>

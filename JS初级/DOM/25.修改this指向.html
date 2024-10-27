@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn1(x, y) {
+        var sum = x + y;
+        console.log(sum, "sum");
+        console.log(this, "this");
+        console.log(this.name, "name");
+      }
+      var obj = {
+        name: "Lucy",
+      };
+      fn1(2, 3);
+      fn1.call(obj, 2, 3);
+//单行注释
+      /**
+       * 多行注释
+       */
+      /** 修改this指向
+       * 1.call(修改this指向,参数1，参数2...)
+       * 2.apply(修改this指向,[参数1,参数2,...])
+       * 3.bind(修改this指向,参数1,参数2)()
+       */
+      /**
+       * call、apply和bind区别
+       * 1.bind无法进行函数调用，call和apply可以直接进行函数调用;
+       * 2.call从第二项开始，要传的参数逐个传入;
+       * 3.apply从第二项开始，要传的参数在数组中逐个传入
+      */
+      function fn2(a, b) {
+        var sum = a * b;
+        console.log(sum, "sum1");
+        console.log(this, "this1");
+        console.log(this.sex, "sex");
+      }
+      var obj1 = {
+        sex: "女",
+        address: "11111",
+      };
+      fn2(4, 5);
+      fn2.apply(obj1, [4, 5]);
+
+      function fn3(i,j) {
+        var sum = i - j;
+        console.log(sum,'sum');
+        console.log(this,'this');
+        console.log(this.age,'age');
+      }
+      var obj2 = {
+        age: 18,
+        day: '星期四'
+      }
+      fn3(79,8);
+      fn3.bind(obj2,79,8)();
+    </script>
+  </body>
+</html>

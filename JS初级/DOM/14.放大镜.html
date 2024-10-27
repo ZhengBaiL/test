@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            position: relative;
+        }
+        #small {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        #drag {
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, .3);
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #big {
+            position: absolute;
+            top:0;
+            left: 400px;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;/*溢出隐藏*/
+            display: none;
+        }
+        #bigImg {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="small">
+            <img src="./images/6.jpg" alt="">
+            <div id="drag"></div>
+        </div>
+        <div id="big">
+            <img src="./images/7.jpg" id="bigImg" alt="">
+        </div>
+    </div>
+    <script>
+        var small = document.getElementById("small");
+        var drag = document.getElementById("drag");
+        var big = document.getElementById("big");
+        var bigImg = document.getElementById("bigImg");
+        small.onmouseover = function() {
+            drag.style.display = 'block';
+            big.style.display = 'block';
+        }
+        small.onmouseout = function() {
+            drag.style.display = 'none';
+            big.style.display = 'none';
+        }
+        small.onmousemove = function(e) {
+            var smallLeft = e.clientX - drag.offsetWidth / 2;
+            var smallTop = e.clientY - drag.offsetHeight / 2;
+            drag.style.left = smallLeft + 'px';
+            drag.style.top = smallTop + 'px';
+            if(drag.offsetLeft <=0){
+                drag.style.left = 0;
+            }
+            if(drag.offsetTop <= 0) {
+                drag.style.top = 0;
+            }
+            //遮罩层允许移动的做大范围
+            var left1 = small.offsetWidth - drag.offsetWidth;
+            var top1 = small.offsetHeight - drag.offsetHeight;
+            if(drag.offsetLeft > left1) {
+                drag.style.left = left1 + 'px';
+            }
+            if(drag.offsetTop > top1) {
+                drag.style.top = top1 + 'px';
+            }
+            // 大图可移动的距离
+            var bigLeft = bigImg.offsetWidth - big.offsetWidth;
+            var bigTop = bigImg.offsetHeight -big.offsetHeight;
+            // 移动距离比例
+            var x = drag.offsetLeft / left1;
+            var y = drag.offsetTop / top1;
+            // 展示大图
+            bigImg.style.left = -bigLeft * x + 'px';
+            bigImg.style.top = -bigTop * y + 'px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var box = document.getElementById("box");
+        //1. 点击事件 this指向点击的对象
+        box.onclick = function() {
+            console.log(this); //box
+        }
+        // 2.倒计时 this指向window
+        box.onclick = function() {
+            setInterval(function() {
+                console.log(this); // 
+            },1000)
+        }
+        // 3.对象中的this 指向当前对象
+        var obj = {
+            name:"Lucy",
+            age: 18,
+            address:function() {
+                console.log(this);
+            }
+        }
+        obj.address()
+        //4.函数中的this 指向window
+        function fn1() {
+            console.log(this);
+        }
+        fn1();
+    </script>
+</body>
+</html>

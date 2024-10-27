@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // typeof [] => object 引用数据类型
+        // 1.定义数组
+        var arr = [];
+        arr[2] = '我的';
+        arr[0] = '你的';
+        arr[1] = true;
+        console.log(arr);
+        // arr[xx] 下标：下标从0开始
+        // 2.定义数组
+        var arr1 = new Array();
+        arr1 = ['1',2,false,null,undefined];
+        console.log(arr1,'arr1');
+        // 3.遍历数组
+        var arr3 = [12,23,34,45,56,67,78,89,90];
+        // console.log(arr3.length)
+        for(var i=0;i<arr3.length;i++){
+            console.log(i,'i')
+            document.write("此次循环的值是:" + arr3[i]+"<br>");
+        }
+    </script>
+</body>
+</html>
